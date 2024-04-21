@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+:root {
+    --content: "";
+}
+* {
+    box-sizing: border-box;
+}
+body,
+button,
+input {
+    font-family: "Wix Madefor Display", sans-serif;
+}
+body {
+    background-color:#d9868c;
+    margin: 0;
+    padding-top: 2rem;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+ul li {
+    padding: 2rem 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    background-color: #febbbd;
+    border-radius: 0.8rem;
+    box-shadow: 3px 3px 3px #0000001c;
+    position: relative;
+}
+li > span:first-child {
+    position: absolute;
+    font-size: 12rem;
+    left: -23px;
+    top: -33px;
+    color: #d9868c4d;
+    font-family: "Black Han Sans", sans-serif;
+}
+ul li button {
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    width: 45px;
+    border: none;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;    
+}
+ul li h3 {
+    margin-top: 0;
+}
+ul li img {
+    justify-self: center;
+    cursor: pointer;
+}
+.logo {
+    margin: 0 auto;
+    display: block;
+    display: block;
+    width: 20rem;
+}
+
+.delete:hover::before {
+    margin-top: 0px;
+    transform: rotate(225deg);
+}
+.delete:hover::after {
+    margin-top: -4px;
+    transform: rotate(135deg);
+}
+.delete::before {
+    content: "";
+    margin-top: -4px;
+    transform: rotate(-405deg);
+}
+.delete::after {
+    content: "";
+    margin-top: -4px;
+    transform: rotate(405deg);
+}
+
+.delete, .delete::before, .delete::after {
+    display: block;
+    background-color: #333;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+.delete { 
+    background: rgba(255, 255, 255, 0);
+    min-height: 30px;
+}
